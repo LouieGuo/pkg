@@ -8,6 +8,11 @@ import (
 	"runtime"
 )
 
+/**
+这边主要的功能就是错误信息加入自定义的消息，并且返回堆栈信息
+如果不需要自定义的消息，并且返回最原始的错误来源，直接用 Cause(err)就可以了
+*/
+
 func callers() []uintptr {
 	var pcs [32]uintptr
 	l := runtime.Callers(3, pcs[:])
@@ -96,7 +101,7 @@ func Recover() {
 	e := recover()
 	if e != nil {
 		s := Stack(2)
-		log.Fatal("Panic: %v\nTraceback\r:%s", e, string(s))
+		log.Fatalf("Panic: %v\nTraceback\r:%s", e, string(s))
 	}
 }
 
@@ -104,6 +109,6 @@ func RecoverStackWithoutLF() {
 	e := recover()
 	if e != nil {
 		s := StackWithoutLF(3)
-		log.Fatal("Panic: %v Traceback:%s", e, string(s))
+		log.Fatalf("Panic: %v Traceback:%s", e, string(s))
 	}
 }
