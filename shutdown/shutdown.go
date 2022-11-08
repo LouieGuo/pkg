@@ -6,7 +6,7 @@ import (
 	"syscall"
 )
 
-// Hook 优雅的关闭Hook，默认SIGINT and SIGTERM
+// Hook 优雅的关闭Hook，默认SIGINT and SIGTERM信号
 type Hook interface {
 	WithSignals(signals ...syscall.Signal) Hook //信号类型
 	Close(funcs ...func())
