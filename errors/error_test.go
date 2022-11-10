@@ -9,16 +9,18 @@ import (
 
 func TestError(t *testing.T) {
 	//err := errors.New("origin error")
-	//err = Wrap(err, "add error")
-	//fmt.Println(WithStack(err))
-	err := testErr3()
+	//err = Wrap(err, "add error") //调用自己定义的，有包含堆栈
+	//fmt.Println(err)
+
+	err := testErr1()
+	fmt.Println(err)
 	//fmt.Println(WithStack(err))
 	//fmt.Printf("%+v", err)
-	fmt.Printf("%+v", errors2.Cause(err))
+	//fmt.Printf("%+v", errors2.Cause(err))
 }
 
 func testErr1() error {
-	return errors2.Wrapf(errors.New("origin error"), "add testErr1")
+	return errors2.Wrap(errors.New("origin error"), "add testErr1")
 }
 func testErr2() error {
 	return testErr1()
