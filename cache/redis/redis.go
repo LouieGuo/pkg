@@ -2,7 +2,9 @@ package redis
 
 import (
 	"fmt"
+	"gitee.com/guolianyu/pkg/errors"
 	"gitee.com/guolianyu/pkg/timeutil"
+	"gitee.com/guolianyu/pkg/trace"
 	"github.com/go-redis/redis/v7"
 	"go.uber.org/zap"
 	"strconv"
