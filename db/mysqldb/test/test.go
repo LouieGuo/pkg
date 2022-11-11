@@ -2,22 +2,21 @@ package main
 
 import (
 	"gitee.com/guolianyu/pkg/db/mysqldb"
-	"go.uber.org/zap"
 	"time"
 )
 
 func initMysql() {
-	err := mysqldb.InitMysqlClient(mysqldb.DefaultClient, "root", "admin123", "localhost:3306", "shop")
+	err := mysqldb.InitMysqlClient(mysqldb.DefaultClient, "root", "mysql123", "192.168.161.130:3306", "goes")
 	if err != nil {
 		mysqldb.MysqltdLogger.Print("InitMysqlClient client error" + mysqldb.DefaultClient)
 		return
 	}
-	mysqldb.MysqltdLogger.Print("connect mysql success ", zap.String("client", mysqldb.DefaultClient))
-	err = mysqldb.InitMysqlClientWithOptions(mysqldb.TxClient, "root", "admin123", "localhost:3306", "shop", mysqldb.WithPrepareStmt(false))
-	if err != nil {
-		mysqldb.MysqltdLogger.Print("InitMysqlClient client error" + mysqldb.TxClient)
-		return
-	}
+	//mysqldb.MysqltdLogger.Print("connect mysql success ", zap.String("client", mysqldb.DefaultClient))
+	//err = mysqldb.InitMysqlClientWithOptions(mysqldb.TxClient, "root", "admin123", "localhost:3306", "shop", mysqldb.WithPrepareStmt(false))
+	//if err != nil {
+	//	mysqldb.MysqltdLogger.Print("InitMysqlClient client error" + mysqldb.TxClient)
+	//	return
+	//}
 
 }
 
@@ -54,17 +53,17 @@ type User struct {
 func main() {
 	initMysql()
 
-	//ormDB := db.GetMysqlClient(db.DefaultClient).DB
-	ormDBTx := mysqldb.GetMysqlClient(mysqldb.TxClient).DB
+	ormDB := mysqldb.GetMysqlClient(mysqldb.DefaultClient).DB
+	//ormDBTx := mysqldb.GetMysqlClient(mysqldb.TxClient).DB
 
 	//查看连接配置
 	//sqlDB, _ := ormDB.DB()
 	//db.MysqltdLogger.Printf("Stats : %+v", sqlDB.Stats())
 
 	//建表
-	//if err := ormDB.AutoMigrate(&User{}); err != nil {
-	//	db.MysqltdLogger.Print("AutoMigrate user error", err)
-	//}
+	if err := ormDB.AutoMigrate(&User{}); err != nil {
+		mysqldb.MysqltdLogger.Print("AutoMigrate user error", err)
+	}
 
 	//自定义表名的另一种方式
 	//if err := ormDB.Table("user_table2").AutoMigrate(&User{}); err != nil {
@@ -125,6 +124,8 @@ func main() {
 	//	db.MysqltdLogger.Print("DROP TABLE error", err)
 	//}
 
+	/**
+
 	//事务的使用
 	//user1 := User{
 	//	Name:     "user1",
@@ -174,6 +175,11 @@ func main() {
 	//	db.MysqltdLogger.Print("Transaction error", zap.Error(err))
 	//}
 
+	*/
+
+	/**
+	另外一种事务提交，用到回滚点操作
+
 	user4 := User{
 		Name:     "user4",
 		Age:      0,
@@ -195,5 +201,5 @@ func main() {
 	tx.Create(&user5)
 	tx.RollbackTo("step1") // 回滚 user2
 	tx.Commit()            // 最终仅提交 user4
-
+	*/
 }

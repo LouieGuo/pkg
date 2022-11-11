@@ -1,3 +1,5 @@
+gitee.com/guolianyu/pkg/errors v0.0.0-20221110164112-ed86cc692bc1 h1:fA7aMMXVzPTjOWUdsPkHQ+U7DXcvYzvVULQzwbmNbMk=
+gitee.com/guolianyu/pkg/errors v0.0.0-20221110164112-ed86cc692bc1/go.mod h1:BQ8xlZ6h0bFhkdRVdAlofD/9LF5L/ETMNu8vDmidT8I=
 gitee.com/guolianyu/pkg/logger v0.0.0-20221110162657-1f29fb3c26ee h1:nvVjv6kolMEgwFMntsE5Ga/SkMa+g9VnC6frcpiA3x4=
 gitee.com/guolianyu/pkg/logger v0.0.0-20221110162657-1f29fb3c26ee/go.mod h1:oCOBBtS92cZVB5S0Isz72qXzOkfU279EcTQBzVM1P0I=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -10,6 +12,8 @@ github.com/jinzhu/now v1.1.4 h1:tHnRBy1i5F2Dh8BAFxqFzxKqqvezXrL2OW1TnX+Mlas=
 github.com/jinzhu/now v1.1.4/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
 github.com/jinzhu/now v1.1.5 h1:/o9tlHleP7gOFmsnYNz3RGnqzefHA47wQpKrrdTIwXQ=
 github.com/jinzhu/now v1.1.5/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
