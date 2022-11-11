@@ -3,8 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"gitee.com/guolianyu/pkg/logger"
 	"gitee.com/guolianyu/pkg/mq/kafka"
 	"github.com/Shopify/sarama"
+	"go.uber.org/zap"
 	"time"
 )
 
@@ -72,10 +74,13 @@ func ProducerSyncMsg() {
 
 // 消费
 func ConsumerMsg() {
-	err := kafka.StartKafkaConsumer([]string{"192.168.161.130:9092"}, []string{"lianyu-topic"}, "test-group", nil, "sticky")
+	err := kafka.StartKafkaConsumer([]string{"192.168.161.130:9092"}, []string{"lianyu-topic"},
+		"test-group", nil, "sticky", msgHandler)
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	//log.Printf("我在该调用的地方调用了：Message claimed: value = %s, timestamp = %v, topic = %s", string(message.Value), message.Timestamp, message.Topic)
 	//signals := make(chan os.Signal, 1)
 	//signal.Notify(signals, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT)
 	//select {
@@ -85,15 +90,15 @@ func ConsumerMsg() {
 	//}
 }
 
-//func msgHandler(message *sarama.ConsumerMessage) (bool, error) {
-//	fmt.Println("消费消息:", "topic:", message.Topic, "Partition:",
-//		message.Partition, "Offset:", message.Offset, "value:", string(message.Value))
-//	msg := Msg{}
-//	err := json.Unmarshal(message.Value, &msg)
-//	if err != nil {
-//		logger.Error("Unmarshal error", zap.Error(err))
-//		return false, err
-//	}
-//	fmt.Println("msg : ", msg)
-//	return true, nil
-//}
+func msgHandler(message *sarama.ConsumerMessage) (bool, error) {
+	fmt.Println("我在该调用的地方调用了,消费消息:", "topic:", message.Topic, "Partition:",
+		message.Partition, "Offset:", message.Offset, "value:", string(message.Value))
+	msg := Msg{}
+	err := json.Unmarshal(message.Value, &msg)
+	if err != nil {
+		logger.Error("Unmarshal error", zap.Error(err))
+		return false, err
+	}
+	fmt.Println("msg : ", msg)
+	return true, nil
+}

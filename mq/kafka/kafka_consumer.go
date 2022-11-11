@@ -24,7 +24,11 @@ import (
 // Consumer 定义消费者结构体
 type Consumer struct {
 	ready chan bool
+	KafkaMessageHandler
 }
+
+// KafkaMessageHandler 回调函数
+type KafkaMessageHandler func(message *sarama.ConsumerMessage) (bool, error)
 
 // 获取消费者配置
 func getKafkaDefaultConsumerConfig(assignor string) (config *sarama.Config) {
@@ -54,13 +58,14 @@ func getKafkaDefaultConsumerConfig(assignor string) (config *sarama.Config) {
 }
 
 // StartKafkaConsumer 启动消费者（这些不要封装，消费代码写在程序中）
-func StartKafkaConsumer(hosts, topics []string, groupID string, config *sarama.Config, assignor string) error {
+func StartKafkaConsumer(hosts, topics []string, groupID string, config *sarama.Config, assignor string, f KafkaMessageHandler) error {
 	var err error
 	if config == nil {
 		config = getKafkaDefaultConsumerConfig(assignor)
 	}
 	consumer := &Consumer{
-		ready: make(chan bool),
+		ready:               make(chan bool),
+		KafkaMessageHandler: f,
 	}
 
 	ctx, cancel := context.WithCancel(context.Background())
@@ -119,6 +124,7 @@ func (c *Consumer) ConsumeClaim(session sarama.ConsumerGroupSession, claim saram
 		select {
 		case message := <-claim.Messages():
 			//f(message)
+			c.KafkaMessageHandler(message)
 			log.Printf("Message claimed: value = %s, timestamp = %v, topic = %s", string(message.Value), message.Timestamp, message.Topic)
 			session.MarkMessage(message, "")
 
