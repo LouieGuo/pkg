@@ -90,6 +90,7 @@ func ConsumerMsg() {
 	//}
 }
 
+// 回调函数，把得到的数据先放到本地参数里面再进行操作，防止超时
 func msgHandler(message *sarama.ConsumerMessage) (bool, error) {
 	fmt.Println("我在该调用的地方调用了,消费消息:", "topic:", message.Topic, "Partition:",
 		message.Partition, "Offset:", message.Offset, "value:", string(message.Value))
