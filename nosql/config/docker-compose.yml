@@ -14,4 +14,4 @@ services:
     volumes:
       - mongo-data:/data/db:rw
 volumes:
-  mongo-data: #要设置mongo的外挂地址
+  mongo-data:  #要设置mongo的外挂地址

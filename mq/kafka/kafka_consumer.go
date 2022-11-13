@@ -3,6 +3,7 @@ package kafka
 import (
 	"context"
 	"github.com/Shopify/sarama"
+	"go.uber.org/zap"
 	"log"
 	"os"
 	"os/signal"
@@ -124,9 +125,14 @@ func (c *Consumer) ConsumeClaim(session sarama.ConsumerGroupSession, claim saram
 		select {
 		case message := <-claim.Messages():
 			//f(message)
-			c.KafkaMessageHandler(message)
-			log.Printf("Message claimed: value = %s, timestamp = %v, topic = %s", string(message.Value), message.Timestamp, message.Topic)
-			session.MarkMessage(message, "")
+			if commit, err := c.KafkaMessageHandler(message); commit {
+				log.Printf("Message claimed: value = %s, timestamp = %v, topic = %s", string(message.Value), message.Timestamp, message.Topic)
+				session.MarkMessage(message, "")
+			} else {
+				if err != nil {
+					log.Panicf("kafka consumer msg error ", zap.Error(err))
+				}
+			}
 
 		// 当多实例加入时会陷入重平衡循环，解决方案如下
 		// 参考 https://github.com/Shopify/sarama/issues/1192
