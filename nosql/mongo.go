@@ -43,7 +43,7 @@ const (
 	DefaultConnectTimeout = 3 * time.Second
 )
 
-// 支持多集群的client，所以采用clientName来区分
+// InitMongoClient 支持多集群的client，所以采用clientName来区分
 func InitMongoClient(clientName, username, password string, addrs []string, mongoPoolLimit uint64) error {
 	hosts := strings.Join(addrs, ",")
 	auth := ""
