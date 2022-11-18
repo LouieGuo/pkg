@@ -1,4 +1,4 @@
-module gitee.com/guolianyu/pkg/errors
+module gitee.com/guolianyu/pkg/errors/v2
 
 go 1.19
 

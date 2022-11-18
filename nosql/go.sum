@@ -1,5 +1,5 @@
-gitee.com/guolianyu/pkg/errors v0.0.0-20221114040525-b1e2d8077d7c h1:5pUNFbqne2Qjvamxwq9IqwLAE5o8cqJXhmCezM+fL1U=
-gitee.com/guolianyu/pkg/errors v0.0.0-20221114040525-b1e2d8077d7c/go.mod h1:BQ8xlZ6h0bFhkdRVdAlofD/9LF5L/ETMNu8vDmidT8I=
+gitee.com/guolianyu/pkg/errors v0.0.0-20221118103801-42f03c4d1ff1 h1:YIPihkln2+Vj56J3bG0MBRdNBCe0i7YgCiorvVSNnNA=
+gitee.com/guolianyu/pkg/errors v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:BQ8xlZ6h0bFhkdRVdAlofD/9LF5L/ETMNu8vDmidT8I=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

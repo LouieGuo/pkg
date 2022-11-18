@@ -1,4 +1,4 @@
-module gitee.com/guolianyu/pkg/logger
+module gitee.com/guolianyu/pkg/logger/v2
 
 go 1.19
 
