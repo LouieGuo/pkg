@@ -1,6 +1,10 @@
 gitee.com/guolianyu/pkg/errors v0.0.0-20221118103801-42f03c4d1ff1 h1:YIPihkln2+Vj56J3bG0MBRdNBCe0i7YgCiorvVSNnNA=
 gitee.com/guolianyu/pkg/errors v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:BQ8xlZ6h0bFhkdRVdAlofD/9LF5L/ETMNu8vDmidT8I=
+gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07 h1:8s/sL1EX2N+hwMaJY9tO5yP+krLYq4Bc4AfSPTMzNKA=
+gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07/go.mod h1:Rt/D55g/hZQEH30cxbuwkBz9zCJraPUW99YMM0BEqjY=
 gitee.com/guolianyu/pkg/timeutil v0.0.0-20221118103801-42f03c4d1ff1 h1:IlJbiDPNRuJOAaenTD2GM3p47eNHu8qM1u5PJhIx+jc=
 gitee.com/guolianyu/pkg/timeutil v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:tGxjIclxuCCtMleCKaJiDz7aeMtwt/YSrlgBs8qCGRY=
+gitee.com/guolianyu/pkg/timeutil/v2 v2.0.0-20221118132323-6b1ba1cf6b07 h1:NgURG3Mz5Z/ijXen65yxUGt+G5FfVAPE/zV037NkrqM=
+gitee.com/guolianyu/pkg/timeutil/v2 v2.0.0-20221118132323-6b1ba1cf6b07/go.mod h1:yKltk/6z7HTd1Yt8l4JSQZphuYCoEwUIEdJjGbU1+Nc=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

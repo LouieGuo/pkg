@@ -1,7 +1,5 @@
-gitee.com/guolianyu/pkg/logger v0.0.0-20221118103801-42f03c4d1ff1 h1:zKM5rBXbhlpzUtx6to2zMloDXC359zyjeo5gUR1kmVY=
-gitee.com/guolianyu/pkg/logger v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:oCOBBtS92cZVB5S0Isz72qXzOkfU279EcTQBzVM1P0I=
-gitee.com/guolianyu/pkg/mq/kafka v0.0.0-20221118103801-42f03c4d1ff1 h1:fhFqk2bQ1pemeRbB7JWW8DplRhvsZw6Zl6QWo1BW0rU=
-gitee.com/guolianyu/pkg/mq/kafka v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:2nyvbGR3C+SI9uaFSggAlzqHg2Cf9ycGIqzpyCHZZB4=
+gitee.com/guolianyu/pkg/logger/v2 v2.0.0-20221118132323-6b1ba1cf6b07 h1:rJyrV2sda81YTZTkm6OY6HMmCjX6OphEuKpb2KH+myA=
+gitee.com/guolianyu/pkg/logger/v2 v2.0.0-20221118132323-6b1ba1cf6b07/go.mod h1:KcN2IWpF8scMBOARO28ZKgWPyfanf4jKklarng2MEaM=
 github.com/BurntSushi/toml v1.2.1 h1:9F2/+DoOYIOksmaJFPw1tGFy1eDnIJXg+UHjuD8lTak=
 github.com/Shopify/sarama v1.37.2 h1:LoBbU0yJPte0cE5TZCGdlzZRmMgMtZU/XgnUKZg9Cv4=
 github.com/Shopify/sarama v1.37.2/go.mod h1:Nxye/E+YPru//Bpaorfhc3JsSGYwCaDDj+R4bK52U5o=

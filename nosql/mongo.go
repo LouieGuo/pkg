@@ -3,7 +3,7 @@ package nosql
 import (
 	"context"
 	"fmt"
-	"gitee.com/guolianyu/pkg/errors"
+	"gitee.com/guolianyu/pkg/errors/v2"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

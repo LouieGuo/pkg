@@ -3,8 +3,7 @@ module gitee.com/guolianyu/pkg/mq/kafka/v2
 go 1.19
 
 require (
-	gitee.com/guolianyu/pkg/logger v0.0.0-20221118103801-42f03c4d1ff1
-	gitee.com/guolianyu/pkg/mq/kafka v0.0.0-20221118103801-42f03c4d1ff1
+	gitee.com/guolianyu/pkg/logger/v2 v2.0.0-20221118132323-6b1ba1cf6b07
 	github.com/Shopify/sarama v1.37.2
 	github.com/eapache/go-resiliency v1.3.0
 	github.com/pkg/errors v0.9.1

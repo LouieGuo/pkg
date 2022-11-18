@@ -1,7 +1,5 @@
-gitee.com/guolianyu/pkg/db/mysqldb v0.0.0-20221118103801-42f03c4d1ff1 h1:yCVaIkx5RoGU8e9xFMJzfyH0VUTg6DkKagWPl+5reng=
-gitee.com/guolianyu/pkg/db/mysqldb v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:qvw5kjkDV+CVF87iPweNebzXRw3apNOW9ohnl7pts7w=
-gitee.com/guolianyu/pkg/errors v0.0.0-20221118103801-42f03c4d1ff1 h1:YIPihkln2+Vj56J3bG0MBRdNBCe0i7YgCiorvVSNnNA=
-gitee.com/guolianyu/pkg/errors v0.0.0-20221118103801-42f03c4d1ff1/go.mod h1:BQ8xlZ6h0bFhkdRVdAlofD/9LF5L/ETMNu8vDmidT8I=
+gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07 h1:8s/sL1EX2N+hwMaJY9tO5yP+krLYq4Bc4AfSPTMzNKA=
+gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07/go.mod h1:Rt/D55g/hZQEH30cxbuwkBz9zCJraPUW99YMM0BEqjY=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=

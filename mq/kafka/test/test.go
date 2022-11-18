@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"gitee.com/guolianyu/pkg/logger"
-	"gitee.com/guolianyu/pkg/mq/kafka"
+	"gitee.com/guolianyu/pkg/logger/v2"
+	"gitee.com/guolianyu/pkg/mq/kafka/v2"
 	"github.com/Shopify/sarama"
 	"go.uber.org/zap"
 	"time"
