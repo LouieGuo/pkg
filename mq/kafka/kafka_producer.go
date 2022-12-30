@@ -1,7 +1,7 @@
 package kafka
 
 import (
-	"gitee.com/guolianyu/pkg/logger"
+	"gitee.com/guolianyu/pkg/logger/v2"
 	"github.com/Shopify/sarama"
 	"github.com/eapache/go-resiliency/breaker"
 	"github.com/pkg/errors"

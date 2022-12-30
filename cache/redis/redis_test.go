@@ -1,7 +1,7 @@
 package redis
 
 import (
-	"gitee.com/guolianyu/pkg/compression"
+	"gitee.com/guolianyu/pkg/compression/v2"
 	"github.com/go-redis/redis/v7"
 	"github.com/stretchr/testify/assert"
 	"testing"

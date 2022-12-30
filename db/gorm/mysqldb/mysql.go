@@ -2,7 +2,7 @@ package mysqldb
 
 import (
 	"fmt"
-	"gitee.com/guolianyu/pkg/errors"
+	"gitee.com/guolianyu/pkg/errors/v2"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

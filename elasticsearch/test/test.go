@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"gitee.com/guolianyu/pkg/elasticsearch"
+	"gitee.com/guolianyu/pkg/elasticsearch/v2"
 	"strconv"
 )
 

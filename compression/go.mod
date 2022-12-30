@@ -1,3 +1,3 @@
-module gitee.com/guolianyu/pkg/compression
+module gitee.com/guolianyu/pkg/compression/v2
 
 go 1.19

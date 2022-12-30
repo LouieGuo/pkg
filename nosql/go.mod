@@ -1,9 +1,9 @@
-module gitee.com/guolianyu/pkg/nosql/mongodb
+module gitee.com/guolianyu/pkg/nosql/mongodb/v2
 
 go 1.19
 
 require (
-	gitee.com/guolianyu/pkg/errors v0.0.0-20221114040525-b1e2d8077d7c
+	gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07
 	go.mongodb.org/mongo-driver v1.11.0
 )
 

@@ -1,12 +1,11 @@
-gitee.com/guolianyu/pkg/errors v0.0.0-20221118041301-e81e5738ba25 h1:lmSYTBgFVXirY8FhGHOjdmP9QJAAyQcV50DTS3hLy7M=
-gitee.com/guolianyu/pkg/errors v0.0.0-20221118041301-e81e5738ba25/go.mod h1:BQ8xlZ6h0bFhkdRVdAlofD/9LF5L/ETMNu8vDmidT8I=
-gitee.com/guolianyu/pkg/trace v0.0.0-20221118041301-e81e5738ba25 h1:XU7QBL9u+vwHP6CU+JAfuNJk7JIt3xrDfdCW8vsMF6k=
-gitee.com/guolianyu/pkg/trace v0.0.0-20221118041301-e81e5738ba25/go.mod h1:hL4c+YGTlBjhgix82RCsLAkoY72IW8ADF/MsoNq+3Ec=
+gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07 h1:8s/sL1EX2N+hwMaJY9tO5yP+krLYq4Bc4AfSPTMzNKA=
+gitee.com/guolianyu/pkg/errors/v2 v2.0.0-20221118132323-6b1ba1cf6b07/go.mod h1:Rt/D55g/hZQEH30cxbuwkBz9zCJraPUW99YMM0BEqjY=
+gitee.com/guolianyu/pkg/trace/v2 v2.0.0-20221118132323-6b1ba1cf6b07 h1:LFQXYKhPVtqPJ4JeBvAEAmlHf6NjpjuZgLxF54NHG9k=
+gitee.com/guolianyu/pkg/trace/v2 v2.0.0-20221118132323-6b1ba1cf6b07/go.mod h1:ioQe/V90ROE4PS6tFsJIbujl1zKx438b+Rgwbuy60Pg=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

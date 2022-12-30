@@ -1,7 +1,7 @@
 package httpclient
 
 import (
-	"gitee.com/guolianyu/pkg/trace"
+	"gitee.com/guolianyu/pkg/trace/v2"
 	"go.uber.org/zap"
 	"sync"
 	"time"

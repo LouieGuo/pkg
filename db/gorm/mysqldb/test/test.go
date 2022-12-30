@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitee.com/guolianyu/pkg/db/mysqldb"
+	"gitee.com/guolianyu/pkg/db/mysqldb/v2"
 	"time"
 )
 

@@ -1,4 +1,4 @@
-module gitee.com/guolianyu/pkg/trace
+module gitee.com/guolianyu/pkg/trace/v2
 
 go 1.19
 
