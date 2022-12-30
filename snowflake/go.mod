@@ -1,3 +1,3 @@
-module gitee.com/guolianyu/pkg/snowflake/v2.1
+module gitee.com/guolianyu/pkg/snowflake/v3
 
 go 1.19
