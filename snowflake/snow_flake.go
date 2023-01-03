@@ -2,6 +2,10 @@ package snowflake
 
 import (
 	"errors"
+	"fmt"
+	"hash/crc32"
+	"math/rand"
+	"net"
 	"sync"
 	"time"
 )
@@ -72,4 +76,21 @@ func (w *Worker) GetId() int64 {
 	// 如果在程序跑了一段时间修改了epoch这个值 可能会导致生成相同的ID
 	ID := (now-epoch)<<timeShift | (w.workerId << workerShift) | (w.number)
 	return ID
+}
+
+func DefaultWorkId() int64 {
+	var id int64
+	ift, err := net.Interfaces()
+	if err != nil {
+		rand.Seed(time.Now().UnixNano())
+		id = int64(rand.Uint64()) % workerMax
+	} else {
+		h := crc32.NewIEEE()
+		for _, value := range ift {
+			fmt.Printf("%s", value.HardwareAddr)
+			h.Write(value.HardwareAddr)
+		}
+		id = int64(h.Sum32()) % workerMax
+	}
+	return id & workerMax
 }
