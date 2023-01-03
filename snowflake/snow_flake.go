@@ -2,7 +2,6 @@ package snowflake
 
 import (
 	"errors"
-	"fmt"
 	"hash/crc32"
 	"math/rand"
 	"net"
@@ -87,7 +86,6 @@ func DefaultWorkId() int64 {
 	} else {
 		h := crc32.NewIEEE()
 		for _, value := range ift {
-			fmt.Printf("%s", value.HardwareAddr)
 			h.Write(value.HardwareAddr)
 		}
 		id = int64(h.Sum32()) % workerMax
